@@ -166,24 +166,25 @@ body{
 
 ##模板预编译
 
-- 对`x-template`代码段,`*.tpl`文件进行编译
+- 对`x-template`代码段,`*.tpl.html`文件进行编译
 - 通过`<!-- @name : temp  -->`设定返回的 `compiler` 变量名
 
-```html
-<script type="text/x-template" id="tpl">
+a.tpl.html
 
+```html
     <!-- @name : temp  -->
 
-    <% for(var i = 0;i<10;i++){ %>
-        <div class="test">#demo#<%=i%></div>
-    <%}%>
-</script>
+    <h1>Hello <%= user %>!</h1>
+
 ```
-编译后使用
-```javascript
-var templateStr = $('#tpl').html();
-eval(templateStr);
-//data(可选参数) : 需要渲染的数据
-//temp : 返回的 `compiler` 变量名
-var htmlStr = temp(data);
+index.html
+```html
+    <script src="a.tpl.html?__inline"></script>
+    <script>
+      //html return
+      //<h1>Hello word!</h1>
+      var html = temp({user:'word'});
+
+    </script>
+
 ```
