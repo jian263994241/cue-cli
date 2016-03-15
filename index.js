@@ -62,13 +62,12 @@ fis.match('*.{coffee,html:coffee}', {
 fis.match('(**)/(*).entry.{js,coffee}', {
     postprocessor: bf,
     rExt: '.js',
-    release:'$1/$2.js',
-    useCache:false
+    release:'$1/$2.js'
 });
 
 fis.match('*.{html:template,tpl.html}', {
     parser: template,
-    rExt: '.js'
+    rExt: '.html'
 });
 
 
