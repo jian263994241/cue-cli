@@ -78,7 +78,10 @@ fis.match('*.inc.{html,css,less,scss,tpl}', {
 fis.match('_*.{html,css,less,scss,tpl}',{
     release: '/.include/$0', parser: null,postprocessor:null,optimizer:null
 });
-
+//label mod
+fis.match('mod/**',{
+  release:false
+});
 
 fis.match('::package', {
     postpackager: fis.plugin('loader')
