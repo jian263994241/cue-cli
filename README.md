@@ -1,5 +1,7 @@
 # cue-cli
 
+## cue-cli
+
 基于fis3封装的前端解决方案
 
 - css 集成scss,less预编译编译
@@ -8,7 +10,29 @@
 
 - browserify 入口文件`*.entry.js`
 
-过滤 `.inc.{html,css,js}` 文件
+### 模块化目录结构
+
+- mod/**  放自有模块
+	打包完成后  dist目录里面不会出现 mod 文件夹
+- res/**  放第三方资源
+	该文件夹下不会对第三方资源处理,提高工具处理效率
+
+### 内置编译时过滤目录文件
+`README.md`,`output/**`,`dist/**`,`dest/**`,`node_nodules/**`,`.git/**`,`.svn/**`,`src/**`,`*.bak`,`.idea'
+
+
+
+### 快速入门
+
+    c release qa
+
+编译输出代码 到 项目文件夹/dist 目录
+
+    c release md5
+
+在`qa`的基础上 增加了  hash指纹和 资源压缩
+
+
 
 Node 版本要求 4.x
 

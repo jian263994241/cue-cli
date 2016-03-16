@@ -22,7 +22,7 @@ fis.isDebug = function() {
   return fis.project.currentMedia() == 'dev' ? true : false;
 };
 //ignore 覆盖设置
-fis.set('project.ignore', ['c-conf.js', 'README.md', 'output/**', 'dist/**', 'dest/**', 'node_nodules/**', '.git/**', '.svn/**', 'src/**', '*.bak', 'fis-conf.js', '.idea','mod/**']);
+fis.set('project.ignore', ['c-conf.js', 'README.md', 'output/**', 'dist/**', 'dest/**', 'node_nodules/**', '.git/**', '.svn/**', 'src/**', '*.bak', 'fis-conf.js', '.idea']);
 
 //fis3-hook-relative
 fis.hook('relative');
