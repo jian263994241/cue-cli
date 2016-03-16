@@ -162,3 +162,8 @@ body{
 - bowserify 模块方案
 - `*.entry.js` 为入口文件
 - 详细文档 [bowserify NPM](https://www.npmjs.com/package/bowserify "bowserify")
+- 模块化 目录结构
+
+
+  mod/**  放模块
+  res/** 放第三方资源
