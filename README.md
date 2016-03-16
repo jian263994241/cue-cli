@@ -18,8 +18,7 @@
 	该文件夹下不会对第三方资源处理,提高工具处理效率
 
 ### 内置编译时过滤目录文件
-`README.md`,`output/**`,`dist/**`,`dest/**`,`node_nodules/**`,`.git/**`,`.svn/**`,`src/**`,`*.bak`,`.idea'
-
+`README.md`,`output/**`,`dist/**`,`dest/**`,`node_nodules/**`,`.git/**`,`.svn/**`,`src/**`,`*.bak`
 
 
 ### 快速入门
