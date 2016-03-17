@@ -55,17 +55,12 @@ fis.match('*.{css,scss,less,html:css,html:less,html:scss}', {
 });
 
 
-fis.match('*.jsx', {
-  parser: fis.plugin('react-tools'),
-  rExt: '.js'
-});
-
 fis.match('*.{coffee,html:coffee}', {
   parser: fis.plugin('coffee-react'),
   rExt: '.js'
 });
 
-fis.match('(**)/(*).entry.{js,coffee}', {
+fis.match('(**)/(*).entry.{js,coffee,jsx,es6}', {
   postprocessor: bf,
   rExt: '.js',
   release: '$1/$2.js'
@@ -128,7 +123,7 @@ fis
     optimizer: fis.plugin('clean-css'),
     useHash: true
   })
-  .match('*.{js,html:js}', {
+  .match('*.{js,html:js,coffee,jsx,es6}', {
     optimizer: fis.plugin('uglify-js'),
     useHash: true
   })
