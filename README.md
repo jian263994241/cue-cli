@@ -29,7 +29,7 @@
 编译输出代码 到 项目文件夹/dist 目录
 
 
-c release op
+	c release op
 
 在`qa`的基础上 增加了 资源压缩
 
