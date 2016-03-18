@@ -21,15 +21,21 @@
 `README.md`,`output/**`,`dist/**`,`dest/**`,`node_nodules/**`,`.git/**`,`.svn/**`,`src/**`,`*.bak`
 
 
+
 ### 快速入门
 
-    c release qa
+	c release qa
 
 编译输出代码 到 项目文件夹/dist 目录
 
-    c release md5
 
-在`qa`的基础上 增加了  hash指纹和 资源压缩
+c release op
+
+在`qa`的基础上 增加了 资源压缩
+
+	c release md5
+
+在`op`的基础上 增加了  hash指纹
 
 
 

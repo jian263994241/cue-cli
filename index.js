@@ -118,6 +118,51 @@ fis
   });
 
 fis
+  .media('op')
+  .match('*.{css,html:css,less,scss}', {
+    optimizer: fis.plugin('clean-css'),
+    useHash: false
+  })
+  .match('*.{js,html:js,coffee,jsx,es6}', {
+    optimizer: fis.plugin('uglify-js'),
+    useHash: false
+  })
+  .match('*.png', {
+    useHash: false
+  })
+  .match('*.min.{js,css}', {
+    useHash: true,
+    optimizer: null
+  })
+  .match('res/**.{js,css,scss,less,svg,png,gif,jpg}', {
+    useHash: false,
+    optimizer: null
+  })
+  .match('*.inc.{html,css,less,scss,tpl}', {
+    release: '/.include/$0',
+    useHash: false,
+    optimizer: null
+  })
+  .match('_*.{html,css,less,scss,tpl}', {
+    release: '/.include/$0',
+    useHash: false,
+    optimizer: null
+  })
+  .match('mod/**', {
+    release: '/.include/$0',
+    useHash: false,
+    optimizer: null
+  })
+  .match('*.map', {
+    release: '/.include/$0'
+  })
+  .match('*', {
+    deploy: fis.plugin('local-deliver', {
+      to: releaseTo
+    })
+  });
+
+fis
   .media('md5')
   .match('*.{css,html:css,less,scss}', {
     optimizer: fis.plugin('clean-css'),
@@ -132,11 +177,11 @@ fis
   })
   .match('*.min.{js,css}', {
     useHash: true,
-    optimizer:null
+    optimizer: null
   })
   .match('res/**.{js,css,scss,less,svg,png,gif,jpg}', {
     useHash: false,
-    optimizer:null
+    optimizer: null
   })
   .match('*.inc.{html,css,less,scss,tpl}', {
     release: '/.include/$0',
