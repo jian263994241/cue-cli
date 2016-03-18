@@ -4,7 +4,7 @@
 
 基于fis3封装的前端解决方案
 
-- css 集成scss,less预编译编译
+- css 集成less预编译编译
 
 - js 集成 react coffee browserify 编译
 
@@ -156,24 +156,7 @@ body{
 ```html
 <link rel="stylesheet" href="css/ios/framework7.ios.less">
 ```
-## scss
 
-
-- 默认对非`_`开头的scss文件编译
-- html中内联scss 执行编译
-```css
-<style type="text/x-scss">
-body{
-	a{
-		color:red;
-	}
-}
-</style>
-```
-- 外链的scss
-```html
-<link rel="stylesheet" href="css/ios/framework7.ios.scss">
-```
 ## cssautoprefixer
 
 - 编译完后,默认开启autoprefixer

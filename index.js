@@ -36,12 +36,13 @@ fis.match('**', {
 
 // 语言能力增强
 //fis-parser-sass2
-fis.match('*.{scss,html:scss}', {
-  parser: fis.plugin('scss2', {
-    sourceMapEmbed: true
-  }),
-  rExt: '.css'
-});
+// "fis-parser-scss2": "^1.2.2",
+// fis.match('*.{scss,html:scss}', {
+//   parser: fis.plugin('scss2', {
+//     sourceMapEmbed: true
+//   }),
+//   rExt: '.css'
+// });
 //fis-parser-less2
 fis.match('*.{less,html:less}', {
   parser: fis.plugin('less2', {
