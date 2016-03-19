@@ -13,12 +13,11 @@
 ### 模块化目录结构
 
 - mod/**  放自有模块
-	打包完成后  dist目录里面不会出现 mod 文件夹
+	打包完成后  output目录里面不会出现 mod 文件夹
 - res/**  放第三方资源
 	该文件夹下不会对第三方资源处理,提高工具处理效率
 
-### 内置编译时过滤目录文件
-`README.md`,`output/**`,`dist/**`,`dest/**`,`node_nodules/**`,`.git/**`,`.svn/**`,`src/**`,`*.bak`
+
 
 
 
@@ -26,7 +25,7 @@
 
 	c release qa
 
-编译输出代码 到 项目文件夹/dist 目录
+编译输出代码 到 项目文件夹/output 目录
 
 
 	c release op
@@ -102,7 +101,7 @@ cue 支持浏览器自动刷新功能，只需要给 release 命令添加 `-L` �
 
     c release qa
 
-- 发布到 项目目录下的 ./dist 文件夹
+- 发布到 项目目录下的 ./output 文件夹
 
 
 ## 在html中嵌入资源
