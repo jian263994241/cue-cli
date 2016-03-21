@@ -33,15 +33,6 @@ fis.match('**', {
   relative: true
 });
 
-// 语言能力增强
-//fis-parser-sass2
-// "fis-parser-scss2": "^1.2.2",
-// fis.match('*.{scss,html:scss}', {
-//   parser: fis.plugin('scss2', {
-//     sourceMapEmbed: true
-//   }),
-//   rExt: '.css'
-// });
 //fis-parser-less2
 fis.match('*.{less,html:less}', {
   parser: fis.plugin('less2', {
@@ -50,7 +41,7 @@ fis.match('*.{less,html:less}', {
   rExt: '.css'
 });
 //css prefixer
-fis.match('*.{css,scss,less,html:css,html:less,html:scss}', {
+fis.match('*.{css,less,html:css,html:less}', {
   postprocessor: fis.plugin('cssautoprefixer')
 });
 
@@ -60,7 +51,7 @@ fis.match('*.{coffee,html:coffee}', {
   rExt: '.js'
 });
 
-fis.match('(**)/(*).entry.{js,coffee,jsx,es6}', {
+fis.match('(**)/(*).entry.{js,coffee}', {
   postprocessor: bf,
   rExt: '.js',
   release: '$1/$2.js'
@@ -78,14 +69,11 @@ fis.match('::package', {
   postpackager: fis.plugin('loader')
 });
 
-global.ojs = fis.plugin('uglify-js');
-global.ocss = fis.plugin('clean-css');
-
-
-
-// fis.on('compile:start', function(file) {
+// fis.on('compile:end', function(file) {
 //   console.log('The file %s is gona compile.', file.subpath);
 // });
+
+
 var dot = path.basename(process.cwd()) == 'src'? '..':'.';
 var releaseTo = dot+'/output';
 //发布
@@ -97,7 +85,7 @@ fis
     useHash: false,
     optimizer: null
   })
-  .match('_*.{html,css,less,scss,tpl}', {
+  .match('_*.{html,css,less,tpl}', {
     release: '/.include/$0'
   })
   .match('mod/**', {
@@ -106,11 +94,11 @@ fis
   .match('*.map', {
     release: '/.include/$0'
   })
-  // .match('*.{css,scss,less,html:css}', {
-  //   optimizer: fis.plugin('clean-css', {
-  //     keepBreaks: true
-  //   })
-  // })
+  .match('*.{css,less,html:css}', {
+    optimizer: fis.plugin('clean-css', {
+      keepBreaks: true
+    })
+  })
   .match('*', {
     deploy: fis.plugin('local-deliver', {
       to: releaseTo
@@ -119,11 +107,11 @@ fis
 
 fis
   .media('op')
-  .match('*.{css,html:css,less,scss}', {
+  .match('*.{css,html:css,less}', {
     optimizer: fis.plugin('clean-css'),
     useHash: false
   })
-  .match('*.{js,html:js,coffee,jsx,es6}', {
+  .match('*.{js,html:js,coffee}', {
     optimizer: fis.plugin('uglify-js'),
     useHash: false
   })
@@ -164,11 +152,11 @@ fis
 
 fis
   .media('md5')
-  .match('*.{css,html:css,less,scss}', {
+  .match('*.{css,html:css,less}', {
     optimizer: fis.plugin('clean-css'),
     useHash: true
   })
-  .match('*.{js,html:js,coffee,jsx,es6}', {
+  .match('*.{js,html:js,coffee}', {
     optimizer: fis.plugin('uglify-js'),
     useHash: true
   })
