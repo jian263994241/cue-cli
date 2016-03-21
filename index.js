@@ -54,6 +54,7 @@ fis.match('*.{coffee,html:coffee}', {
 fis.match('(**)/(*).entry.{js,coffee}', {
   postprocessor: bf,
   rExt: '.js',
+  useCache:false,
   release: '$1/$2.js'
 });
 
