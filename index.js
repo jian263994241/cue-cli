@@ -45,12 +45,6 @@ fis.match('*.{css,less,html:css,html:less}', {
   postprocessor: fis.plugin('cssautoprefixer')
 });
 
-
-fis.match('*.{coffee,html:coffee}', {
-  parser: fis.plugin('coffee-react'),
-  rExt: '.js'
-});
-
 fis.match('(**)/(*).entry.{js,coffee}', {
   postprocessor: bf,
   rExt: '.js',
@@ -63,8 +57,6 @@ fis.match('*.{html:template,tpl.html}', {
   rExt: '.html'
 });
 
-
-// 过滤include 模板文件
 
 fis.match('::package', {
   postpackager: fis.plugin('loader')
