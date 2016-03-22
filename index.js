@@ -45,7 +45,7 @@ fis.match('*.{css,less,html:css,html:less}', {
   postprocessor: fis.plugin('cssautoprefixer')
 });
 
-fis.match('(**)/(*).entry.{js,coffee}', {
+fis.match('(**)/(*).entry.{js,coffee,es6,jsx}', {
   postprocessor: bf,
   rExt: '.js',
   useCache:false,
