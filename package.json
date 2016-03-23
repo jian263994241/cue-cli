@@ -8,6 +8,7 @@
   "dependencies": {
     "browserify": "^13.0.0",
     "coffeeify": "^2.0.1",
+    "dotify": "^1.1.0",
     "fis-parser-coffee-react": "^1.0.1",
     "fis-parser-less2": "^1.0.0",
     "fis-postprocessor-cssautoprefixer": "*",
@@ -31,5 +32,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "1.5.6"
+  "version": "1.5.7"
 }
