@@ -26,7 +26,7 @@ fis.isDebug = function() {
 //fis3-hook-relative
 fis.hook('relative');
 
-// fis.cache.enable = false;
+fis.cache.enable = false;
 
 //相对路径
 fis.match('**', {
@@ -48,7 +48,6 @@ fis.match('*.{css,less,html:css,html:less}', {
 fis.match('(**)/(*).entry.{js,coffee,es6,jsx}', {
   postprocessor: bf,
   rExt: '.js',
-  useCache:false,
   release: '$1/$2.js'
 });
 
