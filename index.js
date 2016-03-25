@@ -21,7 +21,7 @@ fis.project.getDistDir = function() {
 fis.isDebug = function() {
   return fis.project.currentMedia() == 'dev' ? true : false;
 };
-
+fis.set('project.md5Length', 16);
 // scaffold
 fis.config.set('scaffold.type','github');
 fis.config.set('scaffold.namespace','jian263994241');
