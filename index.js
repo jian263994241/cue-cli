@@ -117,7 +117,7 @@ fis
     useHash: true,
     optimizer: null
   })
-  .match('res/**.{js,css,scss,less,svg,png,gif,jpg}', {
+  .match('third/**.{js,css,scss,less,svg,png,gif,jpg}', {
     useHash: false,
     optimizer: null
   })
@@ -162,7 +162,7 @@ fis
     useHash: true,
     optimizer: null
   })
-  .match('res/**.{js,css,scss,less,svg,png,gif,jpg}', {
+  .match('third/**.{js,css,scss,less,svg,png,gif,jpg}', {
     useHash: false,
     optimizer: null
   })
