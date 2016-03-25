@@ -17,7 +17,7 @@
     "fis-postprocessor-cssautoprefixer": "*",
     "fis3": "^3.3.15",
     "fis3-deploy-replace": "^1.0.1",
-    "cue-hook-relative": "^1.0.0",
+    "cue-hook-relative": "^1.0.1",
     "fis3-postpackager-loader": "^1.2.7",
     "liftoff": "^2.1.0",
     "minimist": "^1.1.3"
