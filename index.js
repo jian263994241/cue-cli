@@ -29,7 +29,7 @@ fis.config.set('scaffold.namespace','jian263994241');
 //fis3-hook-relative
 fis.hook('relative');
 
-fis.cache.enable = false;
+// fis.cache.enable = false;
 
 //相对路径
 fis.match('**', {
