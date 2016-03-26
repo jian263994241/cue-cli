@@ -23,9 +23,15 @@ fis.isDebug = function() {
 };
 fis.set('project.md5Length', 16);
 // scaffold
-fis.config.set('scaffold.type','github');
-fis.config.set('scaffold.namespace','jian263994241');
-
+fis.config.set('scaffold.type', 'github');
+fis.config.set('scaffold.namespace', 'jian263994241');
+fis.set('project.ignore', [
+  'output/**',
+  'node_modules/**',
+  '.git/**',
+  '.svn/**',
+  'c-conf.js'
+]);
 //fis3-hook-relative
 fis.hook('relative');
 
@@ -51,7 +57,7 @@ fis.match('*.{css,less,html:css,html:less}', {
 fis.match('(**)/(*).entry.{js,coffee,es6,jsx}', {
   postprocessor: bf,
   rExt: '.js',
-  release: '$1/$2.js'
+  release: '$1/$2'
 });
 
 fis.match('*.{html:template,tpl.html}', {
@@ -64,13 +70,14 @@ fis.match('::package', {
   postpackager: fis.plugin('loader')
 });
 
+
 // fis.on('compile:end', function(file) {
 //   console.log('The file %s is gona compile.', file.subpath);
 // });
 
 
-var dot = path.basename(process.cwd()) == 'src'? '..':'.';
-var releaseTo = dot+'/output';
+var dot = path.basename(process.cwd()) == 'src' ? '..' : '.';
+var releaseTo = dot + '/output';
 //发布
 
 fis
@@ -108,9 +115,6 @@ fis
   })
   .match('*.{js,html:js,coffee}', {
     optimizer: fis.plugin('uglify-js'),
-    useHash: false
-  })
-  .match('*.png', {
     useHash: false
   })
   .match('*.min.{js,css}', {
@@ -155,14 +159,14 @@ fis
     optimizer: fis.plugin('uglify-js'),
     useHash: true
   })
-  .match('*.png', {
+  .match('*.{png,jpg,gif,svg}', {
     useHash: true
   })
   .match('*.min.{js,css}', {
     useHash: true,
     optimizer: null
   })
-  .match('third/**.{js,css,scss,less,svg,png,gif,jpg}', {
+  .match('third/**', {
     useHash: false,
     optimizer: null
   })
@@ -175,6 +179,18 @@ fis
     release: '/.include/$0',
     useHash: false,
     optimizer: null
+  })
+  .match('res/**/(*).{svg,png,jpg,gif}', {
+    release: '/res/i/$1'
+  })
+  .match('res/**/(*).{css,less}', {
+    release: '/res/c/$1'
+  })
+  .match('/*.js', {
+    release: '/res/j/$0'
+  })
+  .match('(**)/(*).entry.{js,coffee,es6,jsx}', {
+    release: '/res/j/$2'
   })
   .match('mod/**', {
     release: '/.include/$0',
