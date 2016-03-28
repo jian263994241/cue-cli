@@ -179,16 +179,16 @@ fis
     optimizer: null
   })
   .match('res/**/(*).{svg,png,jpg,gif}', {
-    release: '/res/i/$1'
+    release: '/i/$1'
   })
   .match('res/**/(*).{css,less}', {
-    release: '/res/c/$1'
+    release: '/c/$1'
   })
   .match('/*.js', {
-    release: '/res/j/$0'
+    release: '/j/$0'
   })
   .match('(**)/(*).entry.{js,coffee,es6,jsx}', {
-    release: '/res/j/$2'
+    release: '/j/$2'
   })
   .match('mod/**', {
     release: '/.include/$0',
