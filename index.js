@@ -117,11 +117,10 @@ fis
     optimizer: fis.plugin('uglify-js'),
     useHash: false
   })
-  .match('*.min.{js,css}', {
-    useHash: true,
-    optimizer: null
-  })
   .match('third/**.{js,css,scss,less,svg,png,gif,jpg}', {
+    useHash: false
+  })
+  .match('*.min.{js,css}', {
     useHash: false,
     optimizer: null
   })
@@ -162,11 +161,10 @@ fis
   .match('*.{png,jpg,gif,svg}', {
     useHash: true
   })
-  .match('*.min.{js,css}', {
-    useHash: true,
-    optimizer: null
+  .match('third/**.{js,css,scss,less,svg,png,gif,jpg}', {
+    useHash: false
   })
-  .match('third/**', {
+  .match('*.min.{js,css}', {
     useHash: false,
     optimizer: null
   })
