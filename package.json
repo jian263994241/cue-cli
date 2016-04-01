@@ -32,7 +32,6 @@
     "fis3-command-server": "0.0.8",
     "fis3-command-inspect":"1.0.3",
     "fis3-hook-components":"*",
-    "fis3-postpackager-loader": "^1.2.7",
     "fis3-deploy-replace": "^1.0.1",
     "fis3-server-node": "0.0.6",
     "fis3-deploy-local-deliver": "1.0.0",
