@@ -1,31 +1,35 @@
-# cue-cli
-
 ## cue-cli
 
 基于fis3封装的前端解决方案
 
-- css 集成less预编译编译
+- css 集成less预编译编译 入口 `*.css.less`
 
 - js 集成 react coffee browserify 编译
 
 - browserify 入口文件`*.entry.js`
 
+### 模块化目录结构 
+
+- mod/**  放自有模块
+打包完成后  dist目录里面不会出现 mod 文件夹
+- res/**  放静态资源
+- third/**  放第三方资源
 
 
-### 快速入门
 
-	c release qa
+### 快速入门 
 
-编译输出代码 到 项目文件夹/output 目录
+c release build 
 
+压缩
 
-	c release op
+c release dist
 
-在`qa`的基础上 增加了 资源压缩
+在`build`的基础上 增加了 资源压缩
 
-	c release md5
+c release prod2
 
-在`op`的基础上 增加了  hash指纹
+发布用, 在`build`的基础上 增加了  hash指纹 和 发布路径
 
 
 
