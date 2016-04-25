@@ -1,6 +1,6 @@
 # Cue-CLI 使用说明
 
-## 一、cue-CLI
+## 一、Cue
 
 基于FIS3封装的前端解决方案
 
@@ -17,7 +17,7 @@
 - `res/**`  放静态资源
 - `third/**`  放第三方资源
 
-### 2.安装cue-CLI
+### 2.安装Cue
 
     npm install -g cue-cli
 
@@ -83,56 +83,56 @@
 
 - 嵌入图片(转base64 图片)
 
-```html
-<img title="logo" src="images/logo.gif?__inline"/>
-```
+
+		<img title="logo" src="images/logo.gif?__inline"/>
+
 
 - 嵌入样式
 
-```html
-<link rel="stylesheet" type="text/css" href="demo.css?__inline">
-```
+
+		<link rel="stylesheet" type="text/css" href="demo.css?__inline">
+
 - 嵌入html
 
-```html
- <link rel="import" href="demo.html?__inline">
-```
+
+ 		<link rel="import" href="demo.html?__inline">
+
 
 - 嵌入js
 
-```html
-<script type="text/javascript" src="demo.js?__inline"></script>
-```
+
+		<script type="text/javascript" src="demo.js?__inline"></script>
+
 
 
 ### 2、在CSS中嵌入资源
 
 - 嵌入图片
 
-```css
-.style {
-      background: url(images/logo.gif?__inline);
-  }
-```
+
+		.style {
+      		background: url(images/logo.gif?__inline);
+  		}
+
 
 - 嵌入css
 
-```css
-@import url('demo.css?__inline');
-```
+
+		@import url('demo.css?__inline');
+
 
 ## 在JS中嵌入资源
 
-```javascript
-__inline('a.js');
-```
+
+		__inline('a.js');
+
 
 ### 3.LESS
 
 - 编译 `*.css.less`
 - cssautoprefixer 编译完后,默认开启autoprefixer
 
-### 4.备注
+### 4.注意
 
 - 所有资源必须放在项目目录下,不能引入项目目录意外的资源
 - 互联网资源不能编译
@@ -145,5 +145,5 @@ __inline('a.js');
 
 - bowserify 模块方案
 - `*.entry.js` 为入口文件
-- 详细文档 [bowserify NPM](https://www.npmjs.com/package/bowserify "bowserify")
+- 详细文档 [bowserify](https://www.npmjs.com/package/bowserify "bowserify")
 - 模块化 目录结构 `c init`
