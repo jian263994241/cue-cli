@@ -11,7 +11,7 @@
 ### 模块化目录结构
 
 - mod/**  放自有模块
-打包完成后  dist目录里面不会出现 mod 文件夹
+打包完成后编译目录里面不会出现 mod 文件夹
 - res/**  放静态资源
 - third/**  放第三方资源
 
@@ -25,9 +25,9 @@
 
 在`build`的基础上 增加了 资源压缩、去console.log 编译到`./dist`文件夹
 
-    c release dist
+    c release op
 
-和dist 方案一样, 保留console.log  编译到 `./output`
+和`dist`方案一样, 保留console.log  编译到 `./output`
 
     c release prod2
 
@@ -44,11 +44,11 @@ npm install -g cue-cli
 
 内置 Web Server，可以方便调试构建结果。
 
-##目录
+##Server
 
-构建时不指定输出目录，即不指定 `-d` 参数时，构建结果被发送到内置 Web Server 的根目录下。此目录可以通过执行以下命令打开。
-
-    c server open
+    c server start 启动服务 
+    c server open  打开缓存目录
+    c server clean 清理缓存目录
 
 ##发布
 
