@@ -1,5 +1,4 @@
-/.ide
-/.ds_storea
+/.idea
+/.DS_store
 /Thumbs.db
-/node_modules
 /npm-debug.log

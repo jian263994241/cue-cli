@@ -8,28 +8,30 @@
 
 - browserify 入口文件`*.entry.js`
 
-### 模块化目录结构 
+### 模块化目录结构
 
 - mod/**  放自有模块
 打包完成后  dist目录里面不会出现 mod 文件夹
 - res/**  放静态资源
 - third/**  放第三方资源
 
+### 快速入门
 
+    c release build
 
-### 快速入门 
+打包,编译到`./output`
 
-c release build 
+    c release dist
 
-压缩
+在`build`的基础上 增加了 资源压缩、去console.log 编译到`./dist`文件夹
 
-c release dist
+    c release dist
 
-在`build`的基础上 增加了 资源压缩
+和dist 方案一样, 保留console.log  编译到 `./output`
 
-c release prod2
+    c release prod2
 
-发布用, 在`build`的基础上 增加了  hash指纹 和 发布路径
+发布生产用, 在`build`的基础上 增加了  hash指纹 和 发布路径
 
 
 
@@ -56,41 +58,19 @@ npm install -g cue-cli
 
 ##启动
 
-通过
-
     c server start
 
 - 来启动本地 Web Server，当此 Server 启动后，会自动浏览器打开 `http://127.0.0.1:8080`，默认监听端口 8080
 
-
-
-## 预览
-
-启动 Web Server 以后，会自动打开浏览器，访问 `http://127.0.0.1:8080` URL，这时即可查看到页面渲染结果。正如所有其他 Web Server，FIS3 内置的 Server 是常驻的，如果不重启计算机或者调用命令关闭是不会关闭的。
-
-所以后续只需访问对应链接即可，而不需要每次 release 就启动一次 server。
-
-## 文件监听
-
-为了方便开发，cue 支持文件监听，当启动文件监听时，修改文件会构建发布。而且其编译是增量的，编译花费时间少。
-
-FIS3 通过对 `release` 命令添加 `-w `或者 `--watch` 参数启动文件监听功能。
-
-    c release -w
-
-添加 `-w `参数时，程序不会执行终止；停止程序用快捷键 `CTRL+c`
-
 ##浏览器自动刷新
 
-文件修改自动构建发布后，如果浏览器能自动刷新，这是一个非常好的开发体验。
+文件修改自动构建发布后，浏览器自动刷新。
 
-cue 支持浏览器自动刷新功能，只需要给 release 命令添加 `-L` 参数，通常 `-w` 和 `-L `一起使用。
-
-    c release -wL
+    c release -L
 
 ## 发布到本地
 
-    c release qa
+    c release build
 
 - 发布到 项目目录下的 ./output 文件夹
 
@@ -128,38 +108,27 @@ cue 支持浏览器自动刷新功能，只需要给 release 命令添加 `-L` �
 ```css
 @import url('demo.css?__inline');
 ```
-
+## 在js中嵌入资源
+```javascript
+__inline('a.js');
+```
 ## less
-- 默认过滤`_`开头的less文件
-- 自动`import`同目录下的 _variable.less,_mixinx.less,_vars.less
-- html中内联less 执行编译
-```css
-<style type="text/x-less">
-body{
-	a{
-		color:red;
-	}
-}
-</style>
-```
-- 外链的less
-```html
-<link rel="stylesheet" href="css/ios/framework7.ios.less">
-```
+- 编译 `*.css.less`
+
 
 ## cssautoprefixer
 
 - 编译完后,默认开启autoprefixer
 
 ## 备注
-- 所有资源必须放在项目目录下
+- 所有资源必须放在项目目录下,不能引入项目目录意外的资源
 - 互联网资源不能编译
-
-
 
 ## 模块化
 
 让你使用类似于 node 的 require() 的方式来组织浏览器端的 Javascript 代码
+
+require js|coffee|css|less|html
 
 - bowserify 模块方案
 - `*.entry.js` 为入口文件
