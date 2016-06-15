@@ -21,8 +21,6 @@
     "fis-lolcat": "1.0.1",
     "fis-optimizer-clean-css": "0.0.9",
     "fis-optimizer-uglify-js": "0.1.10",
-    "fis-postprocessor-cssautoprefixer": "*",
-    "fis-spriter-csssprites-group": "^0.3.16",
     "fis3-command-init": "1.0.13",
     "fis3-command-server": "0.0.9",
     "fis3-deploy-encoding": "1.0.0",
