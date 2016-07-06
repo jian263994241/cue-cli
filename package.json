@@ -14,7 +14,7 @@
     "convert-source-map": "^1.1.2",
     "cue-command-release": "^1.0.16",
     "cue-hook-relative": "^1.0.1",
-    "cue-server-node": "^0.1.5",
+    "cue-server-node": "^0.1.6",
     "fis-command-install": "0.2.17",
     "fis-lolcat": "1.0.1",
     "fis-optimizer-clean-css": "0.0.9",
