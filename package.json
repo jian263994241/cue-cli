@@ -15,7 +15,7 @@
         "colors": "0.6.2",
         "commander": "1.3.2",
         "convert-source-map": "^1.1.2",
-        "cue-command-release": "1.0.19",
+        "cue-command-release": "1.0.20",
         "cue-server-node": "0.1.12",
         "fis-command-install": "0.2.17",
         "fis-lolcat": "1.0.1",
