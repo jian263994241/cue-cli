@@ -16,7 +16,7 @@
     "commander": "1.3.2",
     "convert-source-map": "^1.1.2",
     "cue-server-node": "^0.1.15",
-    "cue-command-server": "^0.0.10",
+    "cue-command-server": "^0.0.11",
     "deasync": "^0.1.7",
     "fis-command-install": "0.2.17",
     "fis-lolcat": "1.0.1",
@@ -58,7 +58,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "1.6.31",
+  "version": "1.6.32",
   "readme": "## cue-cli\n\n基于fis3封装的前端解决方案\n\n- css 集成less预编译编译 入口 `*.css.less`\n\n- js 集成 react coffee browserify 编译\n\n- browserify 入口文件`*.entry.js`\n\n### 模块化目录结构 \n\n- mod/**  放自有模块\n打包完成后  dist目录里面不会出现 mod 文件夹\n- res/**  放静态资源\n- third/**  放第三方资源\n\n\n\n### 快速入门 \n\nc release build \n\n压缩\n\nc release dist\n\n在`build`的基础上 增加了 资源压缩\n\nc release prod2\n\n发布用, 在`build`的基础上 增加了  hash指纹 和 发布路径\n\n\n\n### 安装cue-cli\n\n```javascript\nnpm install -g cue-cli\n```\n## Web Server\n\n内置 Web Server，可以方便调试构建结果。\n\n##目录\n\n构建时不指定输出目录，即不指定 `-d` 参数时，构建结果被发送到内置 Web Server 的根目录下。此目录可以通过执行以下命令打开。\n\n    c server open\n\n##发布\n\n    c release\n\n- 默认被发布到内置 Web Server的根目录下，当启动服务时访问此目录下的资源。\n\n##启动\n\n通过\n\n    c server start\n\n- 来启动本地 Web Server，当此 Server 启动后，会自动浏览器打开 `http://127.0.0.1:8080`，默认监听端口 8080\n\n\n\n## 预览\n\n启动 Web Server 以后，会自动打开浏览器，访问 `http://127.0.0.1:8080` URL，这时即可查看到页面渲染结果。正如所有其他 Web Server，FIS3 内置的 Server 是常驻的，如果不重启计算机或者调用命令关闭是不会关闭的。\n\n所以后续只需访问对应链接即可，而不需要每次 release 就启动一次 server。\n\n## 文件监听\n\n为了方便开发，cue 支持文件监听，当启动文件监听时，修改文件会构建发布。而且其编译是增量的，编译花费时间少。\n\nFIS3 通过对 `release` 命令添加 `-w `或者 `--watch` 参数启动文件监听功能。\n\n    c release -w\n\n添加 `-w `参数时，程序不会执行终止；停止程序用快捷键 `CTRL+c`\n\n##浏览器自动刷新\n\n文件修改自动构建发布后，如果浏览器能自动刷新，这是一个非常好的开发体验。\n\ncue 支持浏览器自动刷新功能，只需要给 release 命令添加 `-L` 参数，通常 `-w` 和 `-L `一起使用。\n\n    c release -wL\n\n## 发布到本地\n\n    c release qa\n\n- 发布到 项目目录下的 ./output 文件夹\n\n\n## 在html中嵌入资源\n\n- 嵌入图片(转base64 图片)\n```html\n<img title=\"logo\" src=\"images/logo.gif?__inline\"/>\n```\n\n- 嵌入样式\n```html\n<link rel=\"stylesheet\" type=\"text/css\" href=\"demo.css?__inline\">\n```\n- 嵌入html\n```html\n <link rel=\"import\" href=\"demo.html?__inline\">\n```\n- 嵌入js\n```html\n<script type=\"text/javascript\" src=\"demo.js?__inline\"></script>\n```\n\n\n## 在css中嵌入资源\n\n- 嵌入图片\n```css\n.style {\n      background: url(images/logo.gif?__inline);\n  }\n```\n- 嵌入css\n```css\n@import url('demo.css?__inline');\n```\n\n## less\n- 默认过滤`_`开头的less文件\n- 自动`import`同目录下的 _variable.less,_mixinx.less,_vars.less\n- html中内联less 执行编译\n```css\n<style type=\"text/x-less\">\nbody{\n\ta{\n\t\tcolor:red;\n\t}\n}\n</style>\n```\n- 外链的less\n```html\n<link rel=\"stylesheet\" href=\"css/ios/framework7.ios.less\">\n```\n\n## cssautoprefixer\n\n- 编译完后,默认开启autoprefixer\n\n## 备注\n- 所有资源必须放在项目目录下\n- 互联网资源不能编译\n\n\n\n## 模块化\n\n让你使用类似于 node 的 require() 的方式来组织浏览器端的 Javascript 代码\n\n- bowserify 模块方案\n- `*.entry.js` 为入口文件\n- 详细文档 [bowserify NPM](https://www.npmjs.com/package/bowserify \"bowserify\")\n- 模块化 目录结构 `c init`\n",
   "readmeFilename": "README.md"
 }
