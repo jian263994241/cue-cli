@@ -7,6 +7,7 @@
   },
   "dependencies": {
     "autoprefixer": "^6.3.6",
+    "babel-eslint": "^7.1.0",
     "babel-plugin-transform-function-bind": "^6.8.0",
     "babel-plugin-transform-object-assign": "^6.8.0",
     "babel-plugin-transform-regenerator": "^6.16.1",
@@ -23,6 +24,7 @@
     "cue-command-server": "^0.0.11",
     "cue-server-node": "^0.1.17",
     "deasync": "^0.1.7",
+    "eslint-plugin-babel": "^3.3.0",
     "eslint-plugin-react": "^6.7.1",
     "eslintify": "^3.1.0",
     "fis-command-install": "0.2.17",
