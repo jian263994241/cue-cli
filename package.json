@@ -25,6 +25,7 @@
     "cue-command-server": "^0.0.11",
     "cue-server-node": "^0.1.18",
     "deasync": "^0.1.7",
+    "derequire": "^2.0.6",
     "eslint-plugin-babel": "^3.3.0",
     "eslint-plugin-react": "^6.7.1",
     "eslintify": "^3.1.0",
