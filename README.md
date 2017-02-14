@@ -4,7 +4,7 @@
 
 - css 集成less预编译编译 入口 `*.css.less`
 
-- js 集成 react coffee browserify 编译
+- js 集成 react browserify 编译
 
 - browserify 入口文件`*.entry.js`
 
