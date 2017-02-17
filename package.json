@@ -24,7 +24,7 @@
     "convert-source-map": "^1.1.2",
     "cue-command-release": "^1.1.1",
     "cue-command-server": "^0.0.12",
-    "cue-server-node": "^0.1.19",
+    "cue-server-node": "^0.1.20",
     "deasync": "^0.1.7",
     "derequire": "^2.0.6",
     "eslint-plugin-babel": "^3.3.0",
