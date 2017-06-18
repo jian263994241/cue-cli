@@ -1,53 +1,53 @@
 {
-  "author": {
-    "name": "jianl"
-  },
-  "bin": {
-    "c": "bin/cue-cli.js"
-  },
-  "dependencies": {
-    "bundle-collapser": "^1.2.1",
-    "colors": "0.6.2",
-    "commander": "1.3.2",
-    "cue-command-release": "^1.1.1",
-    "cue-command-server": "^0.0.12",
-    "cue-server-node": "^0.1.20",
-    "fis-command-install": "0.2.17",
-    "fis-lolcat": "1.0.1",
-    "fis-optimizer-clean-css": "0.0.9",
-    "fis-optimizer-uglify-js": "0.2.1",
-    "fis3-command-init": "1.0.14",
-    "fis3-command-inspect": "*",
-    "fis3-deploy-encoding": "1.0.0",
-    "fis3-deploy-local-deliver": "1.0.0",
-    "fis3-deploy-replace": "^1.0.1",
-    "fis3-errors": "*",
-    "fis3-hook-components": "*",
-    "fis3-hook-relative": "^1.0.9",
-    "fis3-optimizer-html": "^1.0.0",
-    "fis3-packager-map": "1.1.3",
-    "fis3-parser-browserify": "^0.1.0",
-    "fis3-parser-css": "^1.0.0",
-    "glob": "^7.0.3",
-    "iconv-lite": "0.2.10",
-    "install": "^0.8.2",
-    "liftoff": "^2.2.1",
-    "lodash": "4.6.1",
-    "minimatch": "^3.0.2",
-    "minimist": "^1.2.0",
-    "npm": "^3.10.9",
-    "tar": "0.1.17"
-  },
-  "description": "前端自动化构建工具，基于fis3",
-  "keywords": [
-    "fis3"
-  ],
-  "license": "ISC",
-  "main": "index.js",
-  "name": "cue-cli",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "version": "1.7.9",
-  "readmeFilename": "README.md"
+    "author": {
+        "name": "jianl"
+    },
+    "bin": {
+        "c": "bin/cue-cli.js"
+    },
+    "dependencies": {
+        "bundle-collapser": "^1.2.1",
+        "colors": "0.6.2",
+        "commander": "1.3.2",
+        "cue-command-release": "^1.1.1",
+        "cue-command-server": "^0.0.12",
+        "cue-server-node": "^0.1.20",
+        "fis-command-install": "0.2.17",
+        "fis-lolcat": "1.0.1",
+        "fis-optimizer-clean-css": "0.0.9",
+        "fis-optimizer-uglify-js": "0.2.1",
+        "fis3-command-init": "1.0.14",
+        "fis3-command-inspect": "*",
+        "fis3-deploy-encoding": "1.0.0",
+        "fis3-deploy-local-deliver": "1.0.0",
+        "fis3-deploy-replace": "^1.0.1",
+        "fis3-errors": "*",
+        "fis3-hook-components": "*",
+        "fis3-hook-relative": "^1.0.9",
+        "fis3-optimizer-html": "^1.0.0",
+        "fis3-packager-map": "1.1.3",
+        "fis3-parser-browserify": "^0.1.0",
+        "fis3-parser-css": "^1.0.0",
+        "glob": "^7.0.3",
+        "iconv-lite": "0.2.10",
+        "install": "^0.8.2",
+        "liftoff": "^2.2.1",
+        "lodash": "4.6.1",
+        "minimatch": "^3.0.2",
+        "minimist": "^1.2.0",
+        "npm": "^3.10.9",
+        "tar": "0.1.17"
+    },
+    "description": "前端自动化构建工具，基于fis3",
+    "keywords": [
+        "fis3"
+    ],
+    "license": "ISC",
+    "main": "index.js",
+    "name": "cue-cli",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "version": "1.7.10",
+    "readmeFilename": "README.md"
 }
