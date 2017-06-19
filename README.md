@@ -29,10 +29,10 @@ npm install -g cue-cli
 
 通过
 
-    c server start --mlog
+    c server start
 
 - 来启动本地 Web Server，当此 Server 启动后，会自动浏览器打开 `http://127.0.0.1:8080`，默认监听端口 8080
-- `mlog` 增加了移动端调试 console
+- 增加了移动端调试 console
 
 
 
