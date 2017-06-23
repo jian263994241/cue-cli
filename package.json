@@ -26,8 +26,8 @@
         "fis3-hook-relative": "^1.0.9",
         "fis3-optimizer-html": "^1.0.0",
         "fis3-packager-map": "1.1.3",
-        "fis3-parser-browserify": "^0.1.9",
-        "fis3-parser-css": "^1.0.1",
+        "fis3-parser-browserify": "^0.1.13",
+        "fis3-parser-css": "^1.0.5",
         "glob": "^7.0.3",
         "iconv-lite": "0.2.10",
         "install": "^0.10.1",
@@ -48,6 +48,6 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "version": "1.7.11",
+    "version": "1.7.12",
     "readmeFilename": "README.md"
 }
