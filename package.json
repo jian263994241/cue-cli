@@ -21,7 +21,6 @@
     "fis3-deploy-encoding": "1.0.0",
     "fis3-deploy-local-deliver": "1.0.0",
     "fis3-deploy-replace": "^1.0.1",
-    "fis3-deploy-yzip": "^0.1.2",
     "fis3-deploy-zip": "^2.0.0",
     "fis3-errors": "*",
     "fis3-hook-components": "*",
@@ -50,6 +49,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "1.7.16",
+  "version": "1.7.18",
   "readmeFilename": "README.md"
 }
