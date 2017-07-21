@@ -29,6 +29,7 @@
     "fis3-packager-map": "1.1.3",
     "fis3-parser-browserify": "^0.1.15",
     "fis3-parser-css": "^1.0.6",
+    "fis3-postprocessor-obfuscator": "^0.9.4",
     "glob": "^7.0.3",
     "iconv-lite": "0.2.10",
     "install": "^0.10.1",
@@ -49,6 +50,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "1.7.19",
+  "version": "1.8.0",
   "readmeFilename": "README.md"
 }
