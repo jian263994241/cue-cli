@@ -137,3 +137,12 @@ body{
 - `*.entry.js` 为入口文件
 - 详细文档 [bowserify NPM](https://www.npmjs.com/package/bowserify "bowserify")
 - 模块化 目录结构 `c init`
+
+
+## 环境配置 __getConf
+
+c release prod2 读取 conf-prod.json
+
+其他 media 去读 conf.json
+
+具体参考: [fis3-parser-get-conf](https://www.npmjs.com/package/fis3-parser-get-conf)
