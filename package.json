@@ -28,6 +28,7 @@
     "fis3-optimizer-html": "^1.0.0",
     "fis3-optimizer-obfuscator": "^0.9.4",
     "fis3-packager-map": "1.1.3",
+    "fis3-parser-babeljs": "^1.0.1",
     "fis3-parser-browserify": "^0.1.15",
     "fis3-parser-css": "^1.0.9",
     "fis3-parser-get-conf": "2.0.0",
