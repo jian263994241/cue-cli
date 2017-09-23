@@ -54,6 +54,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "1.8.9",
+  "version": "1.8.10",
   "readmeFilename": "README.md"
 }
